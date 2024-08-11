@@ -1,0 +1,31 @@
+palettes:
+  - name: palette_0
+    fixed-entries:
+      - color: {index: 0, r: 255, g: 0, b: 255}
+      - color: {index: 1, r: 255, g: 255, b: 255}
+      - color: {index: 2, r: 0, g: 0, b: 0}
+    images: automatic
+
+
+converts:
+  - name: images
+    palette: palette_0
+    images:
+      - bgBlue.jpg
+      - perfectCookie.png
+      - navigationBar.png
+    tilesets:
+      tile-width: 24
+      tile-height: 24
+      images:
+        - icons.png
+
+
+outputs:
+  - type: c
+    include-file: gfx.h
+    palettes:
+      - palette_0
+    converts:
+      - images
+
